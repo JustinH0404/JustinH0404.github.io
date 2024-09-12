@@ -1,9 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BookOpen } from "lucide-react";
 import path from "path";
 import fs from "fs";
-import { Key } from "react";
 
 export default function Component() {
   const folder1Path = path.join(process.cwd(), "public/images/original");
@@ -34,7 +34,7 @@ export default function Component() {
           `/images/processed/${fileName}`,
         ];
       }
-      return null;
+      return [];
     })
     .filter(Boolean);
   console.log("I am here");
@@ -95,17 +95,14 @@ export default function Component() {
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Below, you'll see the results of our image processing. Each row
-              shows the original image, the processed image, and the final
+              Below, you&apos;ll see the results of our image processing. Each
+              row shows the original image, the processed image, and the final
               colorized result.
             </p>
             {imageTuples.map((imageTuple, index) => (
               <div key={index} className="flex flex-col sm:flex-row gap-6 mt-6">
                 {imageTuple.map(
-                  (
-                    image: string | undefined,
-                    imageIndex: Key | null | undefined
-                  ) => (
+                  (image: string | undefined, imageIndex: number) => (
                     <div
                       key={imageIndex}
                       className="flex-1 transition-all duration-300 hover:shadow-lg"
