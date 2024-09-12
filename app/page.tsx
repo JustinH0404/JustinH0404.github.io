@@ -1,11 +1,44 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BookOpen } from "lucide-react";
-
-type ImageTuple = [string, string, string];
+import path from "path";
+import fs from "fs";
+import { Key } from "react";
 
 export default function Component() {
-  let images: ImageTuple = [["", "", ""]];
+  const folder1Path = path.join(process.cwd(), "public/images/original");
+  const folder2Path = path.join(process.cwd(), "public/images/preprocessed");
+  const folder3Path = path.join(process.cwd(), "public/images/processed");
+
+  const getFilesFromFolder = (folderPath: string) => {
+    return fs.readdirSync(folderPath);
+  };
+
+  // Get all file names from the three folders
+  const folder1Images = getFilesFromFolder(folder1Path);
+  const folder2Images = getFilesFromFolder(folder2Path);
+  const folder3Images = getFilesFromFolder(folder3Path);
+
+  const imageTuples = folder1Images
+    .map((fileName) => {
+      if (
+        folder2Images.includes(fileName) &&
+        folder3Images.includes(fileName) &&
+        fileName.endsWith(".jpg")
+      ) {
+        console.log("here");
+        console.log(fileName);
+        return [
+          `/images/original/${fileName}`,
+          `/images/preprocessed/${fileName}`,
+          `/images/processed/${fileName}`,
+        ];
+      }
+      return null;
+    })
+    .filter(Boolean);
+  console.log("I am here");
+  console.log(imageTuples);
   return (
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white">
       <header className="bg-black dark:bg-white text-white dark:text-black p-6 border-b border-gray-200 dark:border-gray-800">
@@ -66,37 +99,37 @@ export default function Component() {
               shows the original image, the processed image, and the final
               colorized result.
             </p>
-            {images.map((imageTuple, index) => (
+            {imageTuples.map((imageTuple, index) => (
               <div key={index} className="flex flex-col sm:flex-row gap-6 mt-6">
-                {imageTuple.map((image, imageIndex) => (
-                  <div
-                    key={imageIndex}
-                    className="flex-1 transition-all duration-300 hover:shadow-lg"
-                  >
-                    <img
-                      src={image}
-                      alt={`Image ${imageIndex + 1} of set ${index + 1}`}
-                      className="w-full h-auto object-cover rounded-lg border border-gray-200 dark:border-gray-800"
-                    />
-                    <p className="text-center mt-3 font-semibold">
-                      {imageIndex === 0
-                        ? "Original"
-                        : imageIndex === 1
-                        ? "Processed"
-                        : "Colorized"}
-                    </p>
-                  </div>
-                ))}
+                {imageTuple.map(
+                  (
+                    image: string | undefined,
+                    imageIndex: Key | null | undefined
+                  ) => (
+                    <div
+                      key={imageIndex}
+                      className="flex-1 transition-all duration-300 hover:shadow-lg"
+                    >
+                      <img
+                        src={image}
+                        alt={`Image ${imageIndex + 1} of set ${index + 1}`}
+                        className="w-full h-auto object-cover rounded-lg border border-gray-200 dark:border-gray-800"
+                      />
+                      <p className="text-center mt-3 font-semibold">
+                        {imageIndex === 0
+                          ? "Original"
+                          : imageIndex === 1
+                          ? "Processed"
+                          : "Colorized"}
+                      </p>
+                    </div>
+                  )
+                )}
               </div>
             ))}
           </CardContent>
         </Card>
       </main>
-      <footer className="bg-black dark:bg-white text-white dark:text-black p-6 mt-12 border-t border-gray-200 dark:border-gray-800">
-        <p className="text-center">
-          &copy; 2023 CS 180 Portfolio. All rights reserved.
-        </p>
-      </footer>
     </div>
   );
 }
