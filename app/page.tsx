@@ -1,100 +1,101 @@
-import Image from "next/image";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { BookOpen } from "lucide-react";
 
-export default function Home() {
+type ImageTuple = [string, string, string];
+
+export default function Component() {
+  let images: ImageTuple = [["", "", ""]];
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white">
+      <header className="bg-black dark:bg-white text-white dark:text-black p-6 border-b border-gray-200 dark:border-gray-800">
+        <div className="container mx-auto flex items-center justify-between">
+          <h1 className="text-3xl font-bold">CS 180 Portfolio</h1>
+          <Badge variant="outline" className="text-lg">
+            <BookOpen className="mr-2 h-4 w-4" />
+            Monochrome
+          </Badge>
         </div>
+      </header>
+      <main className="container mx-auto p-6 space-y-12">
+        <section className="prose dark:prose-invert max-w-none bg-white dark:bg-black p-8 rounded-lg border border-gray-200 dark:border-gray-800">
+          <h2 className="text-4xl font-bold mb-6">
+            Project 1: Colorizing Prokudin-Gorskii Photos
+          </h2>
+          <h3 className="text-2xl font-semibold mt-8 mb-4">Overview</h3>
+          <p className="text-lg mb-6">
+            Sergei Mikhailovich Prokudin-Gorskii (1863-1944) recorded three
+            exposures of every scene onto a glass plate using a red, a green,
+            and a blue filter. Our goal is to take the digitzed Prokudin-Gorksii
+            glass plate images and produce a color image.
+          </p>
+          <h3 className="text-2xl font-semibold mt-8 mb-4">Approach</h3>
+          <p className="text-lg mb-6">
+            After separating the three different images, the first thing I did
+            to measure the similarity between two different pictures was to just
+            take the Euclidean distance between the two. For the green and red
+            images, I would shift the x and y coordinates by [-20, 20], and
+            recalculate the Euclidean distances. This worked okay, not super
+            great, so I decided to try and crop the sides by 5%. This would help
+            alleviate the issues with the potential black edges messing up the
+            Euclidean distance, or the next metric I tried, NCC. Instead of
+            actually improving it, cropping made it worse. So, I decided to try
+            a new metric -- using Sobel edge detection. This automatically
+            improved the alignments quite a bit, so this is the method I went
+            with. Then, the next step was to process the .tif files. I had tried
+            these when running the Euclidean distances, but the file size was
+            too large and took too long. So instead, I decided to recursively
+            minimize the quality of the image, search for the alignment there,
+            and then scale it back up. I settled for a pixel size of 400, as I
+            found that it worked the best. Then, as I scale the image back up by
+            2x each time, I only need to search a radius of [-2, 2] in both the
+            x and y direction after scaling back up, since we found the best
+            alignment from the scaled down version of the picture. This is the
+            final method I ended up with, as well as cropping the sides by 15%,
+            as I found that worked best as well.
+          </p>
+        </section>
+
+        <Card className="overflow-hidden border border-gray-200 dark:border-gray-800">
+          <CardHeader className="bg-black dark:bg-white text-white dark:text-black">
+            <CardTitle className="text-2xl">Image Comparisons</CardTitle>
+          </CardHeader>
+          <CardContent className="p-6">
+            <p className="text-lg mb-6">
+              Below, you'll see the results of our image processing. Each row
+              shows the original image, the processed image, and the final
+              colorized result.
+            </p>
+            {images.map((imageTuple, index) => (
+              <div key={index} className="flex flex-col sm:flex-row gap-6 mt-6">
+                {imageTuple.map((image, imageIndex) => (
+                  <div
+                    key={imageIndex}
+                    className="flex-1 transition-all duration-300 hover:shadow-lg"
+                  >
+                    <img
+                      src={image}
+                      alt={`Image ${imageIndex + 1} of set ${index + 1}`}
+                      className="w-full h-auto object-cover rounded-lg border border-gray-200 dark:border-gray-800"
+                    />
+                    <p className="text-center mt-3 font-semibold">
+                      {imageIndex === 0
+                        ? "Original"
+                        : imageIndex === 1
+                        ? "Processed"
+                        : "Colorized"}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </CardContent>
+        </Card>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer className="bg-black dark:bg-white text-white dark:text-black p-6 mt-12 border-t border-gray-200 dark:border-gray-800">
+        <p className="text-center">
+          &copy; 2023 CS 180 Portfolio. All rights reserved.
+        </p>
       </footer>
     </div>
   );
