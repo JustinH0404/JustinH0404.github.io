@@ -346,7 +346,8 @@ export default function Project2() {
               result of adding the higher frequencies. The third image is the
               result of blurring the original image. The final image is the
               result of sharpening the blurred image. The resulting
-              "resharpened" image is not much worse than the original image.
+              &quot;resharpened&quot; image is not much worse than the original
+              image.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -424,7 +425,7 @@ export default function Project2() {
             <p className="text-lg mb-6">
               For my first hybrid image, I chose two of my favorite sports
               athletes: NBA Legend Lebron James and MLB superstar Shohei Ohtani.
-              Thus, I've created a new sports superstar: LeBron Ohtani.
+              Thus, I&quot;ve created a new sports superstar: LeBron Ohtani.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 mt-6">
               <div className="flex-1">
@@ -446,11 +447,11 @@ export default function Project2() {
             </div>
             <p className="text-lg mb-6">
               As for my second hybrid image, I created New Francisco, a mix of
-              San Francisco and New York City. This didn't work out too well
-              because they were too similar, interestingly enough. It was hard
-              to differentiate the two, especially in black and white image, up
-              close. This is interesting because the earlier ones that failed
-              for me were hybrid images that were too different.
+              San Francisco and New York City. This didn&quot;t work out too
+              well because they were too similar, interestingly enough. It was
+              hard to differentiate the two, especially in black and white
+              image, up close. This is interesting because the earlier ones that
+              failed for me were hybrid images that were too different.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 mt-6">
               <div className="flex-1">
@@ -472,11 +473,11 @@ export default function Project2() {
             </div>
             <p className="text-lg mb-6">
               As for my second hybrid image, I created New Francisco, a mix of
-              San Francisco and New York City. This didn't work out too well
-              because they were too similar, interestingly enough. It was hard
-              to differentiate the two, especially in black and white image, up
-              close. This is interesting because the earlier ones that failed
-              for me were hybrid images that were too different.
+              San Francisco and New York City. This didn&quot;t work out too
+              well because they were too similar, interestingly enough. It was
+              hard to differentiate the two, especially in black and white
+              image, up close. This is interesting because the earlier ones that
+              failed for me were hybrid images that were too different.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 mt-6">
               <div className="flex-1">

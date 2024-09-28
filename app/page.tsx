@@ -21,9 +21,9 @@ export default function Home() {
             Welcome to My CS 180 Portfolio
           </h2>
           <p className="text-lg mb-6">
-            This portfolio showcases the projects I've completed for CS 180.
-            Each project demonstrates different aspects of computer vision and
-            image processing techniques.
+            This portfolio showcases the projects I&quot;ve completed for CS
+            180. Each project demonstrates different aspects of computer vision
+            and image processing techniques.
           </p>
         </section>
 
