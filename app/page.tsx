@@ -79,10 +79,7 @@ export default function Home() {
               </CardTitle>
             </CardHeader>
             <CardContent className="p-6">
-              <p className="text-lg mb-6">
-                In this project, we colorize black and white photos using the
-                Prokudin-Gorskii method.
-              </p>
+              <p className="text-lg mb-6">We morphed faces</p>
               <Link
                 href="/project3"
                 className="text-blue-600 dark:text-blue-400 hover:underline"
