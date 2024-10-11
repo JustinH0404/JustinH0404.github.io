@@ -310,8 +310,9 @@ export default function Project3() {
           <CardContent className="p-6">
             <p className="text-lg mb-6">
               Finally, I made a video of myself growing up. I put it behind a
-              song of "dancing queen", which I felt was fitting because the
-              final picture is me at my senior prom, where I was 17 (+1).
+              song of &quot;dancing queen&quot;, which I felt was fitting
+              because the final picture is me at my senior prom, where I was 17
+              (+1).
             </p>
             <div className="flex justify-center">
               <video
