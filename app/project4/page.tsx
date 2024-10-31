@@ -183,7 +183,7 @@ export default function Project4() {
           </h2>
           <p className="text-lg mb-6">
             In this project, we explore the fascinating world of image stitching to create panoramic mosaics. 
-            We'll take you through the process of combining multiple images into a seamless panorama.
+            We&apos;ll take you through the process of combining multiple images into a seamless panorama.
           </p>
         </section>
 
@@ -194,7 +194,7 @@ export default function Project4() {
           <CardContent className="p-6">
             <p className="text-lg mb-6">
               We start with three original images: a left view, a center view, and a right view. 
-              These images have overlapping regions that we'll use to stitch them together.
+              These images have overlapping regions that we&apos;ll use to stitch them together.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {originalImages.map((image, index) => (
@@ -372,7 +372,7 @@ export default function Project4() {
         <Card className="overflow-hidden border border-gray-200 dark:border-gray-800">
           <CardContent className="p-12">
             <p className="text-lg mb-6">
-              Now, we will follow the paper "Multi-Image Matching using multi scale oriented patches" to do autostitching instead of manual stitching.
+              Now, we will follow the paper &quotMulti-Image Matching using multi scale oriented patches&quot to do autostitching instead of manual stitching.
               The image we will use is now this image.
               </p>
               <div className="flex flex-col items-center">
@@ -391,7 +391,7 @@ export default function Project4() {
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Following the paper "Multi-Image Matching using Multi-Scale Oriented Patches" by Brown et al., we implement the following steps:
+              Following the paper &quotMulti-Image Matching using Multi-Scale Oriented Patches&quot by Brown et al., we implement the following steps:
             </p>
             <ol className="list-decimal list-inside space-y-4 text-lg mb-6">
               <li>
@@ -408,7 +408,7 @@ export default function Project4() {
               </li>
               <li>
                 <strong>Adaptive Non-Maximal Suppression (ANMS):</strong> We apply ANMS to select a well-distributed subset of the detected corners. The way we do this is to find the points that have both the highest definition (as calculated 
-                by our H function) and are both sparse by introducing the concept of a "suppression radius", which ensures sparsity between points. 
+                by our H function) and are both sparse by introducing the concept of a &quotsuppression radius&quot, which ensures sparsity between points. 
                 <div className="grid grid-cols-1 sm:grid-cols-1 gap-6 mt-4">
                 <img
                 src={anmsImage.src}
@@ -550,7 +550,7 @@ export default function Project4() {
                 The most fascinating aspect of this project was learning about the Adaptive Non-Maximal Suppression (ANMS) technique. 
                 ANMS not only identifies the strongest feature points but also ensures they are well-distributed across the image. 
                 This balance between feature strength and spatial distribution is crucial for robust image stitching, as it prevents 
-                the algorithm from overfitting to a single area of high contrast or texture. It's amazing how this seemingly simple 
+                the algorithm from overfitting to a single area of high contrast or texture. It&apos;s amazing how this seemingly simple 
                 step significantly improves the quality and reliability of the final panorama, making the difference between a 
                 disjointed collection of images and a seamless, immersive view.
               </p>
