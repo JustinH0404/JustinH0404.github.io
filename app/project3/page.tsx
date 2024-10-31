@@ -329,11 +329,6 @@ export default function Project3() {
           </CardContent>
         </Card>
       </main>
-      <footer className="bg-black dark:bg-white text-white dark:text-black p-6 mt-12 border-t border-gray-200 dark:border-gray-800">
-        <p className="text-center">
-          &copy; 2023 CS 180 Portfolio. All rights reserved.
-        </p>
-      </footer>
     </div>
   );
 }
