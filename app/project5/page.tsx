@@ -10,13 +10,6 @@ interface ProjectImage {
 }
 
 export default function Project5() {
-  const generateImages = (count: number, prefix: string): ProjectImage[] => {
-    return Array.from({ length: count }, (_, i) => ({
-      src: `project5/${prefix}${i + 1}.png`,
-      alt: `Image ${i + 1}`,
-      label: `Image ${i + 1}`,
-    }));
-  };
 
   const A0: ProjectImage[] = [
     { src: "project5/A0/man_20.png", alt: "man with a hat (inference 20)", label: "man with a hat (inference 20)" },
