@@ -27,10 +27,200 @@ export default function Project5() {
     { src: "project5/A0/village_40.png", alt: "oil painting of a snowy village  (inference 40)", label: "oil painting of a snowy village  (inference 40)" },
   ];
   const A1_1: ProjectImage[] = [
-    { src: "project5/A1.1/250.png", alt: "man with a hat (inference 20)", label: "man with a hat (inference 20)" },
-    { src: "project5/A1.1/500.png", alt: "rocket (inference 20)", label: "rocket (inference 20)" },
-    { src: "project5/A1.1/750.png", alt: "oil painting of a snowy village  (inference 20)", label: "oil painting of a snowy village  (inference 20)" },
+    { src: "project5/campanile.png", alt: "Original", label: "Berkeley Campanile" },
+    { src: "project5/A1.1/250.png", alt: "t = 250", label: "t = 250" },
+    { src: "project5/A1.1/500.png", alt: "t = 500", label: "t = 500" },
+    { src: "project5/A1.1/750.png", alt: "t = 750", label: "t = 750" },
   ];
+
+  const A1_2: ProjectImage[] = [
+    { src: "project5/A1.1/250.png", alt: "t = 250", label: "t = 250" },
+    { src: "project5/A1.1/500.png", alt: "t = 500", label: "t = 500" },
+    { src: "project5/A1.1/750.png", alt: "t = 750", label: "t = 750" },
+    { src: "project5/A1.2/250.png", alt: "t = 250", label: "t = 250, gaussian blur denoised" },
+    { src: "project5/A1.2/500.png", alt: "t = 500", label: "t = 500, gaussian blur denoised" },
+    { src: "project5/A1.2/750.png", alt: "t = 750", label: "t = 750, gaussian blur denoised" },
+  ];
+
+  const A1_3: ProjectImage[] = [
+    { src: "project5/A1.1/250.png", alt: "t = 250", label: "t = 250" },
+    { src: "project5/A1.1/500.png", alt: "t = 500", label: "t = 500" },
+    { src: "project5/A1.1/750.png", alt: "t = 750", label: "t = 750" },
+    { src: "project5/A1.3/250.png", alt: "t = 250", label: "t = 250, One step denoised" },
+    { src: "project5/A1.3/500.png", alt: "t = 500", label: "t = 500, One step denoised" },
+    { src: "project5/A1.3/750.png", alt: "t = 750", label: "t = 750, One step denoised" },
+  ];
+
+  const A1_4_1: ProjectImage[] = [
+    { src: "project5/A1.4/90.png", alt: "t = 250", label: "t = 90" },
+    { src: "project5/A1.4/240.png", alt: "t = 500", label: "t = 240" },
+    { src: "project5/A1.4/390.png", alt: "t = 750", label: "t = 390" },
+    { src: "project5/A1.4/540.png", alt: "t = 250", label: "t = 540" },
+    { src: "project5/A1.4/690.png", alt: "t = 500", label: "t = 690" },
+  ];
+
+  const A1_4_2: ProjectImage[] = [
+    { src: "project5/campanile.png", alt: "Original", label: "Berkeley Campanile" },
+    { src: "project5/A1.4/clean.png", alt: "t = 750", label: "Iteravely denoised" },
+    { src: "project5/A1.3/750.png", alt: "t = 750", label: "One step denoised" },
+    { src: "project5/A1.2/750.png", alt: "t = 750", label: "t = 750, gaussian blur denoised" }
+  ];
+
+  const A1_5: ProjectImage[] = [
+    { src: "project5/A1.5/1.png", alt: "t = 250", label: "Sample 1" },
+    { src: "project5/A1.5/2.png", alt: "t = 500", label: "Sample 2" },
+    { src: "project5/A1.5/3.png", alt: "t = 750", label: "Sample 3" },
+    { src: "project5/A1.5/4.png", alt: "t = 250", label: "Sample 4" },
+    { src: "project5/A1.5/5.png", alt: "t = 500", label: "Sample 5" },
+  ];
+
+  const A1_6: ProjectImage[] = [
+    { src: "project5/A1.6/1.png", alt: "t = 250", label: "Sample 1" },
+    { src: "project5/A1.6/2.png", alt: "t = 500", label: "Sample 2" },
+    { src: "project5/A1.6/3.png", alt: "t = 750", label: "Sample 3" },
+    { src: "project5/A1.6/4.png", alt: "t = 250", label: "Sample 4" },
+    { src: "project5/A1.6/5.png", alt: "t = 500", label: "Sample 5" },
+  ];
+
+  const A1_7: ProjectImage[] = [
+    { src: "project5/A1.7/1_1.png", alt: "t = 250", label: "i_start = 1" },
+    { src: "project5/A1.7/1_3.png", alt: "t = 500", label: "i_start = 3" },
+    { src: "project5/A1.7/1_5.png", alt: "t = 750", label: "i_start = 5" },
+    { src: "project5/A1.7/1_7.png", alt: "t = 250", label: "i_start = 7" },
+    { src: "project5/A1.7/1_10.png", alt: "t = 500", label: "i_start = 10" },
+    { src: "project5/A1.7/1_20.png", alt: "t = 500", label: "i_start = 20" },
+    { src: "project5/campanile.png", alt: "t = 500", label: "original photo" },
+    { src: "project5/A1.7/2_1.png", alt: "t = 250", label: "i_start = 1" },
+    { src: "project5/A1.7/2_3.png", alt: "t = 500", label: "i_start = 3" },
+    { src: "project5/A1.7/2_5.png", alt: "t = 750", label: "i_start = 5" },
+    { src: "project5/A1.7/2_7.png", alt: "t = 250", label: "i_start = 7" },
+    { src: "project5/A1.7/2_10.png", alt: "t = 500", label: "i_start = 10" },
+    { src: "project5/A1.7/2_20.png", alt: "t = 500", label: "i_start = 20" },
+    { src: "project5/A1.7/2_orig.png", alt: "t = 500", label: "original photo" },
+    { src: "project5/A1.7/3_1.png", alt: "t = 250", label: "i_start = 1" },
+    { src: "project5/A1.7/3_3.png", alt: "t = 500", label: "i_start = 3" },
+    { src: "project5/A1.7/3_5.png", alt: "t = 750", label: "i_start = 5" },
+    { src: "project5/A1.7/3_7.png", alt: "t = 250", label: "i_start = 7" },
+    { src: "project5/A1.7/3_10.png", alt: "t = 500", label: "i_start = 10" },
+    { src: "project5/A1.7/3_20.png", alt: "t = 500", label: "i_start = 20" },
+    { src: "project5/A1.7/3_orig.png", alt: "t = 500", label: "original photo" },
+  ];
+
+  const A1_7_1: ProjectImage[] = [
+    { src: "project5/A1.7.1/1_1.png", alt: "t = 250", label: "i_start = 1" },
+    { src: "project5/A1.7.1/1_3.png", alt: "t = 500", label: "i_start = 3" },
+    { src: "project5/A1.7.1/1_5.png", alt: "t = 750", label: "i_start = 5" },
+    { src: "project5/A1.7.1/1_7.png", alt: "t = 250", label: "i_start = 7" },
+    { src: "project5/A1.7.1/1_10.png", alt: "t = 500", label: "i_start = 10" },
+    { src: "project5/A1.7.1/1_20.png", alt: "t = 500", label: "i_start = 20" },
+    { src: "project5/A1.7.1/1_orig.png", alt: "t = 500", label: "original photo" },
+    { src: "project5/A1.7.1/2_1.png", alt: "t = 250", label: "i_start = 1" },
+    { src: "project5/A1.7.1/2_3.png", alt: "t = 500", label: "i_start = 3" },
+    { src: "project5/A1.7.1/2_5.png", alt: "t = 750", label: "i_start = 5" },
+    { src: "project5/A1.7.1/2_7.png", alt: "t = 250", label: "i_start = 7" },
+    { src: "project5/A1.7.1/2_10.png", alt: "t = 500", label: "i_start = 10" },
+    { src: "project5/A1.7.1/2_20.png", alt: "t = 500", label: "i_start = 20" },
+    { src: "project5/A1.7.1/2_orig.png", alt: "t = 500", label: "original photo" },
+    { src: "project5/A1.7.1/3_1.png", alt: "t = 250", label: "i_start = 1" },
+    { src: "project5/A1.7.1/3_3.png", alt: "t = 500", label: "i_start = 3" },
+    { src: "project5/A1.7.1/3_5.png", alt: "t = 750", label: "i_start = 5" },
+    { src: "project5/A1.7.1/3_7.png", alt: "t = 250", label: "i_start = 7" },
+    { src: "project5/A1.7.1/3_10.png", alt: "t = 500", label: "i_start = 10" },
+    { src: "project5/A1.7.1/3_20.png", alt: "t = 500", label: "i_start = 20" },
+    { src: "project5/A1.7.1/3_orig.png", alt: "t = 500", label: "original photo" },
+    { src: "project5/A1.7.1/4_1.png", alt: "t = 250", label: "i_start = 1" },
+    { src: "project5/A1.7.1/4_3.png", alt: "t = 500", label: "i_start = 3" },
+    { src: "project5/A1.7.1/4_5.png", alt: "t = 750", label: "i_start = 5" },
+    { src: "project5/A1.7.1/4_7.png", alt: "t = 250", label: "i_start = 7" },
+    { src: "project5/A1.7.1/4_10.png", alt: "t = 500", label: "i_start = 10" },
+    { src: "project5/A1.7.1/4_20.png", alt: "t = 500", label: "i_start = 20" },
+    { src: "project5/A1.7.1/4_orig.png", alt: "t = 500", label: "original photo" },
+  ];
+
+  const A1_7_2: ProjectImage[] = [
+    { src: "project5/A1.7.2/1_orig.png", alt: "t = 250", label: "original" },
+    { src: "project5/A1.7.2/1_mask.png", alt: "t = 500", label: "mask" },
+    { src: "project5/A1.7.2/1_replace.png", alt: "t = 750", label: "hole to fill" },
+    { src: "project5/A1.7.2/1_inpaint.png", alt: "t = 250", label: "result" },
+    { src: "project5/A1.7.2/2_orig.png", alt: "t = 250", label: "original" },
+    { src: "project5/A1.7.2/2_mask.png", alt: "t = 500", label: "mask" },
+    { src: "project5/A1.7.2/2_replace.png", alt: "t = 750", label: "hole to fill" },
+    { src: "project5/A1.7.2/2_output.png", alt: "t = 250", label: "result" },
+    { src: "project5/A1.7.2/3_orig.png", alt: "t = 250", label: "original" },
+    { src: "project5/A1.7.2/3_mask.png", alt: "t = 500", label: "mask" },
+    { src: "project5/A1.7.2/3_replace.png", alt: "t = 750", label: "hole to fill" },
+    { src: "project5/A1.7.2/3_inpaint.png", alt: "t = 250", label: "result" },
+  ];
+
+  
+  const A1_7_3: ProjectImage[] = [
+    { src: "project5/A1.7.3/1_1.png", alt: "t = 250", label: "i_start = 1" },
+    { src: "project5/A1.7.3/1_3.png", alt: "t = 500", label: "i_start = 3" },
+    { src: "project5/A1.7.3/1_5.png", alt: "t = 750", label: "i_start = 5" },
+    { src: "project5/A1.7.3/1_7.png", alt: "t = 250", label: "i_start = 7" },
+    { src: "project5/A1.7.3/1_10.png", alt: "t = 500", label: "i_start = 10" },
+    { src: "project5/A1.7.3/1_20.png", alt: "t = 500", label: "i_start = 20" },
+    { src: "project5/campanile.png", alt: "t = 500", label: "original photo" },
+    { src: "project5/A1.7.3/2_1.png", alt: "t = 250", label: "i_start = 1" },
+    { src: "project5/A1.7.3/2_3.png", alt: "t = 500", label: "i_start = 3" },
+    { src: "project5/A1.7.3/2_5.png", alt: "t = 750", label: "i_start = 5" },
+    { src: "project5/A1.7.3/2_7.png", alt: "t = 250", label: "i_start = 7" },
+    { src: "project5/A1.7.3/2_10.png", alt: "t = 500", label: "i_start = 10" },
+    { src: "project5/A1.7.3/2_20.png", alt: "t = 500", label: "i_start = 20" },
+    { src: "project5/A1.7.3/2_orig.png", alt: "t = 500", label: "original photo" },
+    { src: "project5/A1.7.3/3_1.png", alt: "t = 250", label: "i_start = 1" },
+    { src: "project5/A1.7.3/3_3.png", alt: "t = 500", label: "i_start = 3" },
+    { src: "project5/A1.7.3/3_5.png", alt: "t = 750", label: "i_start = 5" },
+    { src: "project5/A1.7.3/3_7.png", alt: "t = 250", label: "i_start = 7" },
+    { src: "project5/A1.7.3/3_10.png", alt: "t = 500", label: "i_start = 10" },
+    { src: "project5/A1.7.3/3_20.png", alt: "t = 500", label: "i_start = 20" },
+    { src: "project5/A1.7.3/3_orig.png", alt: "t = 500", label: "original photo" },
+  ];
+
+  const A1_8: ProjectImage[] = [
+    { src: "project5/A1.8/1.png", alt: "t = 250", label: "People around a campfire" },
+    { src: "project5/A1.8/1_flipped.png", alt: "t = 250", label: "Oil painting of a man" },
+    { src: "project5/A1.8/2.png", alt: "t = 500", label: "Photo of a man" },
+    { src: "project5/A1.8/2_flipped.png", alt: "t = 500", label: "Photo of a dog" },
+    { src: "project5/A1.8/3.png", alt: "t = 750", label: "Coast of amalfi" },
+    { src: "project5/A1.8/3_flipped.png", alt: "t = 750", label: "Hipster person" },
+  ];
+
+  const A1_9: ProjectImage[] = [
+    { src: "project5/A1.9/1.png", alt: "t = 250", label: "Skull/Waterfall" },
+    { src: "project5/A1.9/2.png", alt: "t = 500", label: "Oil painting of snow maountains/waterfalls" },
+    { src: "project5/A1.9/3.png", alt: "t = 750", label: "Rocket Pencil" },
+  ];
+
+  const B1_2_1: ProjectImage[] = [
+    { src: "project5/B1.2.1/epoch1.png", alt: "t = 250", label: "Results after epoch 1" },
+    { src: "project5/B1.2.1/epoch5.png", alt: "t = 250", label: "Results after epoch 5" },
+  ];
+
+  const B1_2_1_2: ProjectImage[] = [
+    { src: "project5/B1.2.1/loss_0.5.png", alt: "t = 250", label: "Loss" },
+  ];
+
+  const B1_2_2: ProjectImage[] = [
+    { src: "project5/B1.2.2/0.0.png", alt: "t = 250", label: "sigma = 0" },
+    { src: "project5/B1.2.2/0.2.png", alt: "t = 250", label: "sigma = 0.2" },
+    { src: "project5/B1.2.2/0.4.png", alt: "t = 250", label: "sigma = 0.4" },
+    { src: "project5/B1.2.2/0.5.png", alt: "t = 250", label: "sigma = 0.5" },
+    { src: "project5/B1.2.2/0.6.png", alt: "t = 250", label: "sigma = 0.6" },
+    { src: "project5/B1.2.2/0.8.png", alt: "t = 250", label: "sigma = 0.8" },
+    { src: "project5/B1.2.2/1.0.png", alt: "t = 250", label: "sigma = 1.0" },
+  ];
+
+  const B2_2_2: ProjectImage[] = [
+    { src: "project5/B2.3/5epochs.png", alt: "t = 250", label: "Results after epoch 5" },
+    { src: "project5/B2.3/20epochs.png", alt: "t = 250", label: "Results after epoch 20" },
+  ];
+
+  const B2_2_1: ProjectImage[] = [
+    { src: "project5/B2.3/training.png", alt: "t = 250", label: "Loss" },
+  ];
+
+
 
   const sections = [
     { title: "Section 1", images: [...A0] },
@@ -49,7 +239,7 @@ export default function Project5() {
   ];
 
   const renderImageGrid = (images: ProjectImage[], columns: number) => (
-    <div className={`grid grid-cols-1 sm:grid-cols-${columns} gap-4 mb-6`}>
+    <div className={`grid grid-cols-${columns} sm:grid-cols-${columns} gap-4 mb-6`}>
       {images.map((image, index) => (
         <div key={index} className="flex flex-col items-center">
           <img
@@ -94,205 +284,263 @@ export default function Project5() {
 
         <Card className="overflow-hidden border border-gray-200 dark:border-gray-800">
           <CardHeader className="bg-black dark:bg-white text-white dark:text-black">
-            <CardTitle className="text-2xl">1. Image Acquisition and Preprocessing</CardTitle>
+            <CardTitle className="text-2xl">1.0 Setup</CardTitle>
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Our journey begins with image acquisition and preprocessing. These crucial steps lay the foundation for all subsequent analysis. We'll explore various techniques to enhance image quality and prepare our data for further processing.
+              We used the pretrained DeepFloyd diffusion to run some tests. The interesting thing here is that we can change the detail at which these pictures are made with the number of inference steps. Here are two examples. The random seed I am using is 4.
             </p>
             {renderImageGrid(A0, 3)}
             <p className="text-lg mt-6">
-              As we can see from these examples, proper preprocessing significantly improves the quality of our input data, setting the stage for more accurate and reliable analysis in the following steps.
+              As we can see, the higher the inference, the more detail we get. This is best seen in the man with the hat, where there are more wrinkles and details on the shirt. 
             </p>
           </CardContent>
         </Card>
 
         <Card className="overflow-hidden border border-gray-200 dark:border-gray-800">
           <CardHeader className="bg-black dark:bg-white text-white dark:text-black">
-            <CardTitle className="text-2xl">2. Feature Extraction</CardTitle>
+            <CardTitle className="text-2xl">1.1 Implementing the Forward Process</CardTitle>
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Feature extraction is a critical step in image analysis. Here, we implement various algorithms to identify and extract meaningful features from our preprocessed images.
+              The first step we did is to add noise to our image. The way we did this is through an equation, x_t = sqrt(a_t)x_0 + sqrt(1 - a_t)e, where e is sampled from a gaussian. Here, we have the image sampled at 3 different t's: 250, 500, 750.
             </p>
-            {renderImageGrid(generateImages(4, "sec2_"), 4)}
+            {renderImageGrid(A1_1, 4)}
             <p className="text-lg mt-6">
-              These extracted features serve as the basis for our subsequent analysis and classification tasks, enabling us to capture the essence of the images in a compact, informative representation.
+              As we can see, the higher the t, the more noisy the image. 
             </p>
           </CardContent>
         </Card>
 
         <Card className="overflow-hidden border border-gray-200 dark:border-gray-800">
           <CardHeader className="bg-black dark:bg-white text-white dark:text-black">
-            <CardTitle className="text-2xl">3. Image Segmentation</CardTitle>
+            <CardTitle className="text-2xl">1.2 Classical Denoising</CardTitle>
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Image segmentation allows us to partition images into multiple segments or objects. This process is crucial for identifying and isolating specific regions of interest within an image.
+              Now, we'll try using classical methods, such as Gaussian blur filtering. This is just using the standard torchvision gaussian blur. 
             </p>
-            {renderImageGrid([...generateImages(3, "sec3_row1_"), ...generateImages(3, "sec3_row2_")], 3)}
+            {renderImageGrid(A1_2, 3)}
             <p className="text-lg mt-6">
-              The results demonstrate how effective segmentation can highlight important structures and objects, paving the way for more focused analysis and object recognition in subsequent steps.
+              As we can see, the results are not so great.
             </p>
           </CardContent>
         </Card>
 
         <Card className="overflow-hidden border border-gray-200 dark:border-gray-800">
           <CardHeader className="bg-black dark:bg-white text-white dark:text-black">
-            <CardTitle className="text-2xl">4. Edge Detection and Contour Analysis</CardTitle>
+            <CardTitle className="text-2xl">1.3 One-Step Denoising</CardTitle>
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Edge detection and contour analysis are fundamental techniques in computer vision. They help us identify object boundaries and shapes within images, which is crucial for object recognition and scene understanding.
+              Now, we'll use one step denoising to try and denoise it better. The way we'll do this is using the pretrained UNet thorugh using our equation from earlier, where the UNet will predict the error. 
             </p>
-            {renderImageGrid([...generateImages(3, "sec4_row1_"), ...generateImages(3, "sec4_row2_")], 3)}
+            {renderImageGrid(A1_3, 3)}
             <p className="text-lg mt-6">
-              These examples showcase various edge detection algorithms and their effectiveness in highlighting important structural information within the images.
+              As we can see, this is a much better result than when classical methods.
             </p>
           </CardContent>
         </Card>
 
         <Card className="overflow-hidden border border-gray-200 dark:border-gray-800">
           <CardHeader className="bg-black dark:bg-white text-white dark:text-black">
-            <CardTitle className="text-2xl">5. Texture Analysis</CardTitle>
+            <CardTitle className="text-2xl">1.4 Iterative Denoising</CardTitle>
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Texture analysis is a powerful tool for characterizing the surface and structure of objects in images. It plays a crucial role in material recognition and scene classification.
+              Now, we'll try iterative denoising. Instead of trying to just guess the noise in one step, we'll try to get an estimate of a previous timestep, and predict that. The way we would do that is through another mathematical formula: 
+              x_t_prime = sqrt(a_bar_t_prime) B_t / (1 - a_bar_t) * x_0 + sqrt(a_t)(1 - a_bar_t_prime) / (1 - a_bar_t) x_t + v_sigma, where v_sigma is a random noise that the model predicts. 
             </p>
-            {renderImageGrid([...generateImages(5, "sec5_row1_"), ...generateImages(4, "sec5_row2_")], 5)}
+            {renderImageGrid(A1_4_1, 5)}
+            {renderImageGrid(A1_4_2, 4)}
             <p className="text-lg mt-6">
-              These results demonstrate various texture analysis techniques and their ability to capture and quantify complex patterns and structures within images.
+              Here, we the image at different steps. As the final results show, the iteratively denoised has the best results and closest to original.
             </p>
           </CardContent>
         </Card>
 
         <Card className="overflow-hidden border border-gray-200 dark:border-gray-800">
           <CardHeader className="bg-black dark:bg-white text-white dark:text-black">
-            <CardTitle className="text-2xl">6. Color Analysis and Processing</CardTitle>
+            <CardTitle className="text-2xl">1.5 Diffusion Model Sampling</CardTitle>
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Color analysis and processing are essential for many computer vision tasks. Here, we explore various color spaces and techniques for manipulating and analyzing color information in images.
+              Now, we'll input pure noise into the model, and see what the model generates from that. 
             </p>
-            {renderImageGrid(generateImages(5, "sec6_"), 5)}
+            {renderImageGrid(A1_5, 5)}
             <p className="text-lg mt-6">
-              These examples illustrate different color processing techniques and their applications in image enhancement, segmentation, and object recognition.
+              These are some pretty cool things that the model generated from pure noise!
             </p>
           </CardContent>
         </Card>
 
         <Card className="overflow-hidden border border-gray-200 dark:border-gray-800">
           <CardHeader className="bg-black dark:bg-white text-white dark:text-black">
-            <CardTitle className="text-2xl">7. Morphological Operations</CardTitle>
+            <CardTitle className="text-2xl">1.6 Classifier-Free Guidance</CardTitle>
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Morphological operations are powerful tools for manipulating image shapes and structures. They are particularly useful for noise removal, image enhancement, and feature detection.
+              The generated pictures can be improved by using Classifier Free Guidance. This means that we can we compute both a conditional and unconditional noise estimate, and by combining the two, we will get better pictures! We used a gamma value of 7
             </p>
-            {renderImageGrid(generateImages(5, "sec7_"), 5)}
+            {renderImageGrid(A1_6, 5)}
             <p className="text-lg mt-6">
-              These results showcase various morphological operations and their effects on different types of images, demonstrating their versatility in image processing tasks.
+              As we can see, the pictures generated are definitely better than what we had earlier. 
             </p>
           </CardContent>
         </Card>
 
         <Card className="overflow-hidden border border-gray-200 dark:border-gray-800">
           <CardHeader className="bg-black dark:bg-white text-white dark:text-black">
-            <CardTitle className="text-2xl">8. Image Filtering and Restoration</CardTitle>
+            <CardTitle className="text-2xl">1.7 Image to Image Translation</CardTitle>
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Image filtering and restoration techniques are crucial for enhancing image quality and recovering information from degraded or noisy images. We explore various filters and their applications in this section.
+              Now, we use the iterative denoising function with CFG to generate images that are close to our source image by take our original image, injecting a little bit of gaussian noise, then specifying different t values to start at. As we can see, 
+              the later the t value, then the closer we get to our original image. 
             </p>
-            {renderImageGrid([...generateImages(7, "sec8_row1_"), ...generateImages(7, "sec8_row2_"), ...generateImages(7, "sec8_row3_")], 7)}
+            {renderImageGrid(A1_7, 7)}
             <p className="text-lg mt-6">
-              These examples demonstrate the effectiveness of different filtering techniques in noise reduction, edge preservation, and overall image enhancement.
+              Here are two different images that I chose on my own, I chose the empire state building and the great wall of china. I wanted to see how well it could capture the details. 
             </p>
           </CardContent>
         </Card>
 
         <Card className="overflow-hidden border border-gray-200 dark:border-gray-800">
           <CardHeader className="bg-black dark:bg-white text-white dark:text-black">
-            <CardTitle className="text-2xl">9. Image Compression and Coding</CardTitle>
+            <CardTitle className="text-2xl">1.7.1 Editing Hand Drawn and Web Images</CardTitle>
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Image compression is essential for efficient storage and transmission of visual data. In this section, we explore various compression techniques and their impact on image quality and file size.
+              So now we try using nonrealistic images. I tried a few different images, including an online image of an anime character, as well as two and drawn images.
             </p>
-            {renderImageGrid([...generateImages(7, "sec9_row1_"), ...generateImages(7, "sec9_row2_"), ...generateImages(7, "sec9_row3_")], 7)}
+            {renderImageGrid(A1_7_1, 7)}
             <p className="text-lg mt-6">
-              These results illustrate the trade-offs between compression ratio and image quality for different compression algorithms and settings.
+              One interesting thing to note is that the image did not do well with the text within my image. 
             </p>
           </CardContent>
         </Card>
 
         <Card className="overflow-hidden border border-gray-200 dark:border-gray-800">
           <CardHeader className="bg-black dark:bg-white text-white dark:text-black">
-            <CardTitle className="text-2xl">10. Object Detection and Recognition</CardTitle>
+            <CardTitle className="text-2xl">1.7.2 Inpainting</CardTitle>
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Object detection and recognition are fundamental tasks in computer vision with numerous real-world applications. We implement and evaluate several state-of-the-art algorithms in this section.
+              The next test we did is to see if the model can paint in parts that we remove. For example, if we tkae a block outside of the campanile, what would the model produce? 
             </p>
-            {renderImageGrid([...generateImages(4, "sec10_row1_"), ...generateImages(4, "sec10_row2_"), ...generateImages(4, "sec10_row3_")], 4)}
+            {renderImageGrid(A1_7_2, 4)}
             <p className="text-lg mt-6">
-              These examples showcase the performance of various object detection and recognition algorithms on different types of images and scenes.
+              These are some pretty interesting results!
             </p>
           </CardContent>
         </Card>
 
         <Card className="overflow-hidden border border-gray-200 dark:border-gray-800">
           <CardHeader className="bg-black dark:bg-white text-white dark:text-black">
-            <CardTitle className="text-2xl">11. Image Classification</CardTitle>
+            <CardTitle className="text-2xl">1.7.3 Text-Conditional image to image Translation</CardTitle>
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Image classification is a core task in computer vision, involving the assignment of predefined categories to input images. We explore various classification algorithms and their performance in this section.
+              Now, we'll give it a text condition, but input our original image with some noise to see how the model can try to get to our desired text. 
             </p>
-            {renderImageGrid([...generateImages(7, "sec11_row1_"), ...generateImages(7, "sec11_row2_"), ...generateImages(7, "sec11_row3_")], 7)}
+            {renderImageGrid(A1_7_3, 7)}
             <p className="text-lg mt-6">
-              These results demonstrate the effectiveness of different classification models on a diverse set of image categories, highlighting their strengths and limitations.
+              I'm a bitch 
             </p>
           </CardContent>
         </Card>
 
         <Card className="overflow-hidden border border-gray-200 dark:border-gray-800">
           <CardHeader className="bg-black dark:bg-white text-white dark:text-black">
-            <CardTitle className="text-2xl">12. Image Synthesis and Generation</CardTitle>
+            <CardTitle className="text-2xl">1.8 Visual Anagrams</CardTitle>
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Image synthesis and generation involve creating new images from scratch or modifying existing ones. We explore cutting-edge techniques in this exciting field of computer vision and deep learning.
+              Now, we'll try to have visual anagrams. This means that when we have it upright, the picture will look one way, and if we flip the picture, it'll look like something else. The way we did this is by adding two different noises. One would be the first image we chose. 
+              Then, we would flip the image, generate the noise given the second prompt, then flip it again. Then we would average these two noises to get the next timestep
             </p>
-            {renderImageGrid([...generateImages(2, "sec12_row1_"), ...generateImages(2, "sec12_row2_"), ...generateImages(2, "sec12_row3_")], 2)}
+            {renderImageGrid(A1_8, 2)}
             <p className="text-lg mt-6">
-              These examples showcase the capabilities of various image synthesis and generation models, demonstrating their potential in creative and practical applications.
+              These are some really cool applications of the stuff we worked on. The only one that didn't work out super well was the dog/human, but i feel like that is because it's hard to merge the two. 
             </p>
           </CardContent>
         </Card>
 
         <Card className="overflow-hidden border border-gray-200 dark:border-gray-800">
           <CardHeader className="bg-black dark:bg-white text-white dark:text-black">
-            <CardTitle className="text-2xl">13. Future Directions and Conclusions</CardTitle>
+            <CardTitle className="text-2xl">1.9 Hybrid Images</CardTitle>
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              As we conclude our exploration of advanced image processing and analysis, we look towards future directions in the field and summarize our key findings and insights.
+              Finally, we'll implement hybrid images by creating another composite noise. The way this will work is if we combine the low frequencies of one noise with the high frequencies of another.
             </p>
-            {renderImageGrid(generateImages(3, "sec13_"), 3)}
+            {renderImageGrid(A1_9, 3)}
+          </CardContent>
+        </Card>
+
+        <Card className="overflow-hidden border border-gray-200 dark:border-gray-800">
+          <CardHeader className="bg-black dark:bg-white text-white dark:text-black">
+            <CardTitle className="text-2xl">2.1 Training a single step denoising UNET</CardTitle>
+          </CardHeader>
+          <CardContent className="p-6">
+            <p className="text-lg mb-6">
+              Now, we'll try to actually build our own UNET denoiser, using an L2 loss. The way we trained it is similar to how we did earlier: by adding gaussian noise to our pictures. 
+              Then, we'll train it using an Adam optimizer. Here's how they look after a few epochs of training
+            </p>
+            {renderImageGrid(B1_2_1, 1)}
             <p className="text-lg mt-6">
-              These final examples illustrate some of the most promising areas for future research and development in computer vision and image processing, pointing the way towards exciting new possibilities in the field.
+              Below is a graph of the loss. 
             </p>
+            {renderImageGrid(B1_2_1_2, 1)}
+          </CardContent>
+        </Card>
+
+        <Card className="overflow-hidden border border-gray-200 dark:border-gray-800">
+          <CardHeader className="bg-black dark:bg-white text-white dark:text-black">
+            <CardTitle className="text-2xl">2.1.2 Out of distribution testing</CardTitle>
+          </CardHeader>
+          <CardContent className="p-6">
+            <p className="text-lg mb-6">
+              Now, we'll see what the denoised output is for varying levels of noise. 
+            </p>
+            {renderImageGrid(B1_2_2, 1)}
+          </CardContent>
+        </Card>
+
+        <Card className="overflow-hidden border border-gray-200 dark:border-gray-800">
+          <CardHeader className="bg-black dark:bg-white text-white dark:text-black">
+            <CardTitle className="text-2xl">2.1 Adding Time Conditioning to the UNet</CardTitle>
+          </CardHeader>
+          <CardContent className="p-6">
+            <p className="text-lg mb-6">
+              Now, we'll try to inject a scalar t into our unet to condition it on time. The way we will do this is to add it in in between our up blocoks, and add to the result from what we had.
+              Here is the resulting loss curve plot for the time conditioned UNet
+            </p>
+            {renderImageGrid(B2_2_1, 1)}
+            <p className="text-lg mt-6">
+              Here are the results of the sampling from epoch 5 and epoch 20. 
+            </p>
+            {renderImageGrid(B2_2_2, 1)}
+          </CardContent>
+        </Card>
+
+        <Card className="overflow-hidden border border-gray-200 dark:border-gray-800">
+          <CardHeader className="bg-black dark:bg-white text-white dark:text-black">
+            <CardTitle className="text-2xl">2.4 Adding Class-Conditioning</CardTitle>
+          </CardHeader>
+          <CardContent className="p-6">
+            <p className="text-lg mb-6">
+              Now, we'll do something similar but add class conditioning. Here is the resulting loss curve. 
+            </p>
+            {renderImageGrid(B2_2_1, 1)}
+            <p className="text-lg mt-6">
+              Here are the results of the sampling from epoch 5 and epoch 20. 
+            </p>
+            {renderImageGrid(B2_2_2, 1)}
           </CardContent>
         </Card>
 
       </main>
-      <footer className="bg-black dark:bg-white text-white dark:text-black p-6 mt-12 border-t border-gray-200 dark:border-gray-800">
-        <p className="text-center">
-          &copy; 2023 CS 180 Portfolio. All rights reserved.
-        </p>
-      </footer>
     </div>
   );
 }
