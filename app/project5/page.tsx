@@ -221,23 +221,6 @@ export default function Project5() {
   ];
 
 
-
-  const sections = [
-    { title: "Section 1", images: [...A0] },
-    { title: "Section 2", images: A1_1 },
-    { title: "Section 3", images: [...generateImages(3, "sec3_row1_"), ...generateImages(3, "sec3_row2_")] },
-    { title: "Section 4", images: [...generateImages(3, "sec4_row1_"), ...generateImages(3, "sec4_row2_")] },
-    { title: "Section 5", images: [...generateImages(5, "sec5_row1_"), ...generateImages(4, "sec5_row2_")] },
-    { title: "Section 6", images: generateImages(5, "sec6_") },
-    { title: "Section 7", images: generateImages(5, "sec7_") },
-    { title: "Section 8", images: [...generateImages(7, "sec8_row1_"), ...generateImages(7, "sec8_row2_"), ...generateImages(7, "sec8_row3_")] },
-    { title: "Section 9", images: [...generateImages(7, "sec9_row1_"), ...generateImages(7, "sec9_row2_"), ...generateImages(7, "sec9_row3_")] },
-    { title: "Section 10", images: [...generateImages(4, "sec10_row1_"), ...generateImages(4, "sec10_row2_"), ...generateImages(4, "sec10_row3_")] },
-    { title: "Section 11", images: [...generateImages(7, "sec11_row1_"), ...generateImages(7, "sec11_row2_"), ...generateImages(7, "sec11_row3_")] },
-    { title: "Section 12", images: [...generateImages(2, "sec12_row1_"), ...generateImages(2, "sec12_row2_"), ...generateImages(2, "sec12_row3_")] },
-    { title: "Section 13", images: generateImages(3, "sec13_") },
-  ];
-
   const renderImageGrid = (images: ProjectImage[], columns: number) => (
     <div className={`grid grid-cols-${columns} sm:grid-cols-${columns} gap-4 mb-6`}>
       {images.map((image, index) => (
@@ -278,7 +261,7 @@ export default function Project5() {
           </h2>
           <p className="text-lg mb-6">
             In this project, we delve into advanced image processing techniques and analysis. 
-            We'll explore various methods and their applications in computer vision and image understanding.
+            We&apos;ll explore various methods and their applications in computer vision and image understanding.
           </p>
         </section>
 
@@ -303,7 +286,7 @@ export default function Project5() {
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              The first step we did is to add noise to our image. The way we did this is through an equation, x_t = sqrt(a_t)x_0 + sqrt(1 - a_t)e, where e is sampled from a gaussian. Here, we have the image sampled at 3 different t's: 250, 500, 750.
+              The first step we did is to add noise to our image. The way we did this is through an equation, x_t = sqrt(a_t)x_0 + sqrt(1 - a_t)e, where e is sampled from a gaussian. Here, we have the image sampled at 3 different t&apos;s: 250, 500, 750.
             </p>
             {renderImageGrid(A1_1, 4)}
             <p className="text-lg mt-6">
@@ -318,7 +301,7 @@ export default function Project5() {
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Now, we'll try using classical methods, such as Gaussian blur filtering. This is just using the standard torchvision gaussian blur. 
+              Now, we&apos;ll try using classical methods, such as Gaussian blur filtering. This is just using the standard torchvision gaussian blur. 
             </p>
             {renderImageGrid(A1_2, 3)}
             <p className="text-lg mt-6">
@@ -333,7 +316,7 @@ export default function Project5() {
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Now, we'll use one step denoising to try and denoise it better. The way we'll do this is using the pretrained UNet thorugh using our equation from earlier, where the UNet will predict the error. 
+              Now, we&apos;ll use one step denoising to try and denoise it better. The way we&apos;ll do this is using the pretrained UNet thorugh using our equation from earlier, where the UNet will predict the error. 
             </p>
             {renderImageGrid(A1_3, 3)}
             <p className="text-lg mt-6">
@@ -348,7 +331,7 @@ export default function Project5() {
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Now, we'll try iterative denoising. Instead of trying to just guess the noise in one step, we'll try to get an estimate of a previous timestep, and predict that. The way we would do that is through another mathematical formula: 
+              Now, we&apos;ll try iterative denoising. Instead of trying to just guess the noise in one step, we&apos;ll try to get an estimate of a previous timestep, and predict that. The way we would do that is through another mathematical formula: 
               x_t_prime = sqrt(a_bar_t_prime) B_t / (1 - a_bar_t) * x_0 + sqrt(a_t)(1 - a_bar_t_prime) / (1 - a_bar_t) x_t + v_sigma, where v_sigma is a random noise that the model predicts. 
             </p>
             {renderImageGrid(A1_4_1, 5)}
@@ -365,7 +348,7 @@ export default function Project5() {
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Now, we'll input pure noise into the model, and see what the model generates from that. 
+              Now, we&apos;ll input pure noise into the model, and see what the model generates from that. 
             </p>
             {renderImageGrid(A1_5, 5)}
             <p className="text-lg mt-6">
@@ -428,7 +411,7 @@ export default function Project5() {
             <p className="text-lg mb-6">
               The next test we did is to see if the model can paint in parts that we remove. For example, if we tkae a block outside of the campanile, what would the model produce? 
             </p>
-            {renderImageGrid(A1_7_2, 4)}
+            {renderImageGrid(A1_7_2, 5)}
             <p className="text-lg mt-6">
               These are some pretty interesting results!
             </p>
@@ -441,11 +424,11 @@ export default function Project5() {
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Now, we'll give it a text condition, but input our original image with some noise to see how the model can try to get to our desired text. 
+              Now, we&apos;ll give it a text condition, but input our original image with some noise to see how the model can try to get to our desired text. 
             </p>
             {renderImageGrid(A1_7_3, 7)}
             <p className="text-lg mt-6">
-              I'm a bitch 
+              These are some very interseting pictures!
             </p>
           </CardContent>
         </Card>
@@ -456,12 +439,12 @@ export default function Project5() {
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Now, we'll try to have visual anagrams. This means that when we have it upright, the picture will look one way, and if we flip the picture, it'll look like something else. The way we did this is by adding two different noises. One would be the first image we chose. 
+              Now, we&apos;ll try to have visual anagrams. This means that when we have it upright, the picture will look one way, and if we flip the picture, it&apos;ll look like something else. The way we did this is by adding two different noises. One would be the first image we chose. 
               Then, we would flip the image, generate the noise given the second prompt, then flip it again. Then we would average these two noises to get the next timestep
             </p>
             {renderImageGrid(A1_8, 2)}
             <p className="text-lg mt-6">
-              These are some really cool applications of the stuff we worked on. The only one that didn't work out super well was the dog/human, but i feel like that is because it's hard to merge the two. 
+              These are some really cool applications of the stuff we worked on. The only one that didn&apos;t work out super well was the dog/human, but i feel like that is because it&apos;s hard to merge the two. 
             </p>
           </CardContent>
         </Card>
@@ -472,7 +455,7 @@ export default function Project5() {
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Finally, we'll implement hybrid images by creating another composite noise. The way this will work is if we combine the low frequencies of one noise with the high frequencies of another.
+              Finally, we&apos;ll implement hybrid images by creating another composite noise. The way this will work is if we combine the low frequencies of one noise with the high frequencies of another.
             </p>
             {renderImageGrid(A1_9, 3)}
           </CardContent>
@@ -484,8 +467,8 @@ export default function Project5() {
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Now, we'll try to actually build our own UNET denoiser, using an L2 loss. The way we trained it is similar to how we did earlier: by adding gaussian noise to our pictures. 
-              Then, we'll train it using an Adam optimizer. Here's how they look after a few epochs of training
+              Now, we&apos;ll try to actually build our own UNET denoiser, using an L2 loss. The way we trained it is similar to how we did earlier: by adding gaussian noise to our pictures. 
+              Then, we&apos;ll train it using an Adam optimizer. Here&apos;s how they look after a few epochs of training
             </p>
             {renderImageGrid(B1_2_1, 1)}
             <p className="text-lg mt-6">
@@ -501,7 +484,7 @@ export default function Project5() {
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Now, we'll see what the denoised output is for varying levels of noise. 
+              Now, we&apos;ll see what the denoised output is for varying levels of noise. 
             </p>
             {renderImageGrid(B1_2_2, 1)}
           </CardContent>
@@ -513,7 +496,7 @@ export default function Project5() {
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Now, we'll try to inject a scalar t into our unet to condition it on time. The way we will do this is to add it in in between our up blocoks, and add to the result from what we had.
+              Now, we&apos;ll try to inject a scalar t into our unet to condition it on time. The way we will do this is to add it in in between our up blocoks, and add to the result from what we had.
               Here is the resulting loss curve plot for the time conditioned UNet
             </p>
             {renderImageGrid(B2_2_1, 1)}
@@ -530,7 +513,7 @@ export default function Project5() {
           </CardHeader>
           <CardContent className="p-6">
             <p className="text-lg mb-6">
-              Now, we'll do something similar but add class conditioning. Here is the resulting loss curve. 
+              Now, we&apos;ll do something similar but add class conditioning. Here is the resulting loss curve. 
             </p>
             {renderImageGrid(B2_2_1, 1)}
             <p className="text-lg mt-6">
