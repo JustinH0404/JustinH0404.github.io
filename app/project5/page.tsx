@@ -213,6 +213,16 @@ export default function Project5() {
     { src: "project5/B2.3/training.png", alt: "t = 250", label: "Loss" },
   ];
 
+  const B2_3_2: ProjectImage[] = [
+    { src: "project5/B2.4/5epoch.png", alt: "t = 250", label: "Results after epoch 5" },
+    { src: "project5/B2.4/20epoch.png", alt: "t = 250", label: "Results after epoch 20" },
+  ];
+
+  const B2_3_1: ProjectImage[] = [
+    { src: "project5/B2.4/training.png", alt: "t = 250", label: "Loss" },
+  ];
+
+
 
   const renderImageGrid = (images: ProjectImage[], columns: number) => (
     <div className={`grid grid-cols-${columns} sm:grid-cols-${columns} gap-4 mb-6`}>
@@ -404,7 +414,7 @@ export default function Project5() {
             <p className="text-lg mb-6">
               The next test we did is to see if the model can paint in parts that we remove. For example, if we tkae a block outside of the campanile, what would the model produce? 
             </p>
-            {renderImageGrid(A1_7_2, 5)}
+            {renderImageGrid(A1_7_2, 4)}
             <p className="text-lg mt-6">
               These are some pretty interesting results!
             </p>
@@ -508,11 +518,11 @@ export default function Project5() {
             <p className="text-lg mb-6">
               Now, we&apos;ll do something similar but add class conditioning. Here is the resulting loss curve. 
             </p>
-            {renderImageGrid(B2_2_1, 1)}
+            {renderImageGrid(B2_3_1, 1)}
             <p className="text-lg mt-6">
               Here are the results of the sampling from epoch 5 and epoch 20. 
             </p>
-            {renderImageGrid(B2_2_2, 1)}
+            {renderImageGrid(B2_3_2, 1)}
           </CardContent>
         </Card>
 
