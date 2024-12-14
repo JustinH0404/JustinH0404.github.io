@@ -124,6 +124,23 @@ export default function Home() {
               </Link>
             </CardContent>
           </Card>
+          <Card className="overflow-hidden border border-gray-200 dark:border-gray-800">
+            <CardHeader className="bg-black dark:bg-white text-white dark:text-black">
+              <CardTitle className="text-2xl flex items-center">
+                <Code className="mr-2 h-6 w-6" />
+                Final Project: NeRFs
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="p-6">
+              <p className="text-lg mb-6">Neural Radiance Fields</p>
+              <Link
+                href="/project6"
+                className="text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                View Project Details
+              </Link>
+            </CardContent>
+          </Card>
         </div>
       </main>
     </div>
